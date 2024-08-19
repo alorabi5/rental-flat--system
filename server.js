@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 const testJWTRouter = require('./controllers/test-jwt');
 const usersRouter = require('./controllers/users');
 const profilesRouter = require('./controllers/profiles');
+const flatRouter = require("./controllers/flat");
 const morgan = require("morgan");
 
 mongoose.connect(process.env.MONGODB_URI);
@@ -22,6 +23,7 @@ app.use(morgan("dev"));
 app.use('/test-jwt', testJWTRouter);
 app.use('/users', usersRouter);
 app.use('/profiles', profilesRouter);
+app.use("/flat", flatRouter);
 
 app.listen(3000, () => {
     console.log('The express app is ready!');

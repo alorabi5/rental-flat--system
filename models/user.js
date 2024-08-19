@@ -1,28 +1,6 @@
 const mongoose = require("mongoose");
 
-const flatSechema = new mongoose.Schema({
-  img: {
-    type: String,
-  },
-  location: {
-    tyoe: String,
-    required: true,
-  },
-  descrption: {
-    type: String,
-    required: true,
-  },
-});
-const rentalSechema = new mongoose.Schema({
-  startDate: {
-    type: String,
-  },
-  endDate: {
-    tyoe: String,
-    required: true,
-  },
-  flat: [flatSechema],
-});
+
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
@@ -35,9 +13,13 @@ const userSchema = new mongoose.Schema({
   },
   isOwner: {
     type: Boolean,
-    required: true,
   },
-  flat: [rentalSechema],
+  flatsOwned: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Flat",
+    },
+  ],
 });
 
 userSchema.set("toJSON", {
