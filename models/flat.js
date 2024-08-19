@@ -1,30 +1,32 @@
 const mongoose = require("mongoose");
 
-const userSchema = new mongoose.Schema({
-  username: {
-    type: String,
-    unique: true,
-    required: true,
+const flatSchema = mongoose.Schema({
+  price: {
+    type: Number,
+    // require: true
   },
-  hashedPassword: {
+  location: {
     type: String,
-    required: true,
+    // require: true
   },
-  isOwner: {
+  isBooked: {
     type: Boolean,
+    // require: true
   },
-  flatsOwned: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Flat",
-    },
-  ],
+  imageUrl: {
+    type: String,
+    // require: true
+  },
+  imageAlt: {
+    type: String,
+    // require: true
+  },
+  description: {
+    type: String,
+    // require: true
+  },
 });
 
-userSchema.set("toJSON", {
-  transform: (document, returnedObject) => {
-    delete returnedObject.hashedPassword;
-  },
-});
+const Flat = mongoose.model("Flat", flatSchema);
 
-module.exports = mongoose.model("User", userSchema);
+module.exports = Flat;
