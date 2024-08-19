@@ -37,6 +37,7 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     required: true,
   },
+  flat: [rentalSechema],
 });
 
 userSchema.set("toJSON", {
