@@ -30,28 +30,4 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.put("/:flatId", async (req, res) => {
-  try {
-    const updatedFlat = await Flat.findByIdAndUpdate(
-      req.params.flatId,
-      req.body,
-      { new: true }
-    );
-
-    res.status(200).json(updatedFlat);
-  } catch (error) {
-    res.status(500).json(error);
-  }
-});
-
-router.delete("/:flatId", async (req, res) => {
-  try {
-    const deleteFlat = await Flat.findByIdAndDelete(req.params.flatId);
-
-    res.status(200).json(deleteFlat);
-  } catch (error) {
-    res.status(500).json(error);
-  }
-});
-
 module.exports = router;
