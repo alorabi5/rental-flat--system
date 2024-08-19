@@ -5,7 +5,7 @@ const flatSechema = new mongoose.Schema({
     type: String,
   },
   location: {
-    tyoe: String,
+    type: String,
     required: true,
   },
   descrption: {
@@ -18,7 +18,7 @@ const rentalSechema = new mongoose.Schema({
     type: String,
   },
   endDate: {
-    tyoe: String,
+    type: String,
     required: true,
   },
   flat: [flatSechema],
