@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const flatSechema = new mongoose.Schema({
   img: {
     type: String,
-    required: true,
   },
   location: {
     type: String,
