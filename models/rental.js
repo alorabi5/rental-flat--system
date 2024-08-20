@@ -1,3 +1,4 @@
+// models/rental.js
 const mongoose = require("mongoose");
 
 const rentalSchema = mongoose.Schema({

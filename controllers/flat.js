@@ -37,7 +37,7 @@ router.put("/:flatId", async (req, res) => {
       req.body,
       { new: true }
     );
-
+    
     res.status(200).json(updatedFlat);
   } catch (error) {
     res.status(500).json(error);
