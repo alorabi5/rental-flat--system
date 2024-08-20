@@ -4,11 +4,11 @@ const mongoose = require("mongoose");
 const rentalSchema = mongoose.Schema({
   startDate: {
     type: Date,
-    // require: true
+    require: true
   },
   endDate: {
     type: Date,
-    // require: true
+    require: true
   },
   userId: {
     type: mongoose.Schema.Types.ObjectId,
