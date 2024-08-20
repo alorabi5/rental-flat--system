@@ -13,6 +13,7 @@ const userSchema = new mongoose.Schema({
   },
   isOwner: {
     type: Boolean,
+    required: true,
   },
   flatsOwned: [
     {

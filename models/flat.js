@@ -4,27 +4,27 @@ const mongoose = require("mongoose");
 const flatSchema = mongoose.Schema({
   price: {
     type: Number,
-    // require: true
+    require: true
   },
   location: {
     type: String,
-    // require: true
+    require: true
   },
   isBooked: {
     type: Boolean,
-    // require: true
+    require: true
   },
   imageUrl: {
     type: String,
-    // require: true
+    require: true
   },
   imageAlt: {
     type: String,
-    // require: true
+    require: true
   },
   description: {
     type: String,
-    // require: true
+    require: true
   },
 
   // Owner of the Flat
