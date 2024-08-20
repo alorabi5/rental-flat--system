@@ -1,3 +1,4 @@
+// models/flat.js
 const mongoose = require("mongoose");
 
 const flatSchema = mongoose.Schema({
@@ -25,6 +26,13 @@ const flatSchema = mongoose.Schema({
     type: String,
     // require: true
   },
+
+  // Owner of the Flat
+  ownerId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  }
 });
 
 const Flat = mongoose.model("Flat", flatSchema);
