@@ -15,6 +15,8 @@ const verifyToken = require("./middleware/verify-token");
 
 const morgan = require("morgan");
 
+const port = process.env.PORT ? process.env.PORT : '3000';
+
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on("connected", () => {
@@ -32,6 +34,6 @@ app.use("/profiles", verifyToken, profilesRouter);
 app.use("/flat", verifyToken, flatRouter);
 app.use("/rental", verifyToken, rentalRouter);  
 
-app.listen(process.env.PORT, () => {
+app.listen(port, () => {
   console.log("The express app is ready!");
 });
