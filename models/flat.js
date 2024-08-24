@@ -12,7 +12,7 @@ const flatSchema = mongoose.Schema({
   },
   isBooked: {
     type: Boolean,
-    require: true
+    // require: true
   },
   imageUrl: {
     type: String,
