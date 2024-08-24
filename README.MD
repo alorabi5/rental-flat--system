@@ -8,7 +8,13 @@ With our user-friendly platform, you can manage your rental properties effortles
 
 Whether you're a landlord looking to list your available flats or a tenant seeking the perfect rental, our system provides a seamless and efficient experience. Start exploring our extensive property listings and discover your ideal rental flat today!
 
-[Deployed Link](https://rental-flat-system-front-end.vercel.app/flat)
+# Links
+
+- [Deployed Link](https://rental-flat-system-front-end.vercel.app/flat)
+
+- [GitHub BackEnd](https://github.com/alorabi5/rental-flat-system-back-end)
+
+- [GitHub FrontEnd](https://github.com/alorabi5/rental-flat-system-frontEnd)
 
 # User Story
 
